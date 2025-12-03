@@ -207,11 +207,19 @@ a:active {
   flex-wrap: wrap;
   margin-top: 2rem;
   max-width: 800px; /* exakt so breit wie .briefing */
+  width: 100%;
+  max-width: 800px; 
+  box-sizing: border-box; /* damit padding+gap nicht überläuft */
+  padding: 0 2rem; /* genauso wie .briefing */
 }
 
 .image-row img {
   width: 100%;
   max-width: 380px; /* 2 Bilder nebeneinander */
+  border-radius: 12px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+  flex: 1 1 calc(50% - 1rem); /* 2 gleich große Spalten */
+  max-width: none; /* Bild darf komplett in die 50%-Spalte */
   border-radius: 12px;
   box-shadow: 0 3px 6px rgba(0,0,0,0.2);
 }

@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <style>
+@import url('https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap');
+</style>
+  <title>Tag 08 – Weird Christmas Inc. 🎄</title>
+  <!-- deine bestehenden Styles (gekürzt / übernommen) -->
+  <style>
+
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Parkinsans', sans-serif;
+      color: #333;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh; /* Seite mindestens so hoch wie der Viewport */
+      background-color: #fff;
+    }
+
+    main {
+      flex: 1; /* Füllt den restlichen Platz zwischen Header und Footer */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* --- Navigation --- */
+    nav {
+      background-color: white;
+      color: black;
+      padding: 1rem 2rem;
+      margin: 1rem;
+      border: 2px #ff6900 solid;
+      border-radius: 10px;
+      width: calc(100% - 2rem);
+      box-sizing: border-box;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content:flex-start;
+      gap: 2rem;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      align-content: center;
+      align-items: center;
+    }
+
+    nav li {
+      list-style: none;
+      font-weight: bold;
+      cursor: pointer;
+      white-space: none;
+    }
+
+   a {
+  position: relative;
+  display: inline-block;
+  color: black;
+  text-decoration: none;
+  background-image: linear-gradient(#ff6900, #ff6900);
+  background-size: 0% 100%;
+  background-repeat: no-repeat;
+  background-position: left;
+  transition: color 0.3s ease-in-out, background-size 0.3s ease-in-out;
+  padding: 0 .25rem;
+}
+
+a:hover {
+  color: white;
+  background-size: 100% 100%;
+}
+a:active {
+  color: white;
+  background-size: 100% 100%;
+}
+
+    /* --- Header --- */
+    header {
+      background-color: #ff6900;
+      color: white;
+      padding: 2rem;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 3.5rem;
+    }
+
+      h2 {
+        font-size: 3.5rem;
+        margin:0;
+    }
+    .briefing {
+      border-radius: 12px;
+      color:rgb(0, 0, 0);
+      padding: 2rem;
+      margin-top:2rem;
+      margin-right: 6rem;
+      margin-left:6rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+      max-width: 800px;
+      text-align: left;
+    }
+
+    .upload-area {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .upload-box {
+      background: #ff6900;
+      border: 3px dashed #ffae74;
+      border-radius: 12px;
+      padding: 2rem;
+      color: white;
+    }
+
+    .upload-box h3 {
+      margin-top: 0;
+    }
+
+    input[type="file"] {
+      margin-top: 0.5rem;
+    }
+
+    a.back {
+      display: inline-block;
+      margin-top: 2rem;
+      text-decoration: none;
+      background-color: white;
+      color: black;
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      border: 3px #ff6900 solid;
+      transition: background 0.2s;
+      box-shadow: 0 3px 5px rgba(0,0,0,0.2);
+    }
+
+    a.back:hover {
+      background: #ff6900;
+      color:white;
+      transform: scale(1.05);
+    }
+
+    footer {
+      padding: 1rem;
+      background: #ff6900;
+      color: white;
+      text-align: center;
+    }
+.button-54 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
+  cursor: pointer;
+  border: 3px solid;
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin-bottom:2rem;
+  margin-top: 2rem;
+}
+
+.button-54:active {
+  box-shadow: 0px 0px 0px 0px;
+  top: 5px;
+  left: 5px;
+}
+
+@media (min-width: 768px) {
+  .button-54 {
+    padding: 0.25em 0.75em;
+  }
+}
+
+    .snowflake {
+  color: #fff;
+  font-size: 1em;
+  font-family: Arial;
+  text-shadow: 0 0 1px #000;
+}
+
+@-webkit-keyframes snowflakes-fall{0%{top:-10%}100%{top:100%}}@-webkit-keyframes snowflakes-shake{0%{-webkit-transform:translateX(0px);transform:translateX(0px)}50%{-webkit-transform:translateX(80px);transform:translateX(80px)}100%{-webkit-transform:translateX(0px);transform:translateX(0px)}}@keyframes snowflakes-fall{0%{top:-10%}100%{top:100%}}@keyframes snowflakes-shake{0%{transform:translateX(0px)}50%{transform:translateX(80px)}100%{transform:translateX(0px)}}.snowflake{position:fixed;top:-10%;z-index:9999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:default;-webkit-animation-name:snowflakes-fall,snowflakes-shake;-webkit-animation-duration:10s,3s;-webkit-animation-timing-function:linear,ease-in-out;-webkit-animation-iteration-count:infinite,infinite;-webkit-animation-play-state:running,running;animation-name:snowflakes-fall,snowflakes-shake;animation-duration:10s,3s;animation-timing-function:linear,ease-in-out;animation-iteration-count:infinite,infinite;animation-play-state:running,running}.snowflake:nth-of-type(0){left:1%;-webkit-animation-delay:0s,0s;animation-delay:0s,0s}.snowflake:nth-of-type(1){left:10%;-webkit-animation-delay:1s,1s;animation-delay:1s,1s}.snowflake:nth-of-type(2){left:20%;-webkit-animation-delay:6s,.5s;animation-delay:6s,.5s}.snowflake:nth-of-type(3){left:30%;-webkit-animation-delay:4s,2s;animation-delay:4s,2s}.snowflake:nth-of-type(4){left:40%;-webkit-animation-delay:2s,2s;animation-delay:2s,2s}.snowflake:nth-of-type(5){left:50%;-webkit-animation-delay:8s,3s;animation-delay:8s,3s}.snowflake:nth-of-type(6){left:60%;-webkit-animation-delay:6s,2s;animation-delay:6s,2s}.snowflake:nth-of-type(7){left:70%;-webkit-animation-delay:2.5s,1s;animation-delay:2.5s,1s}.snowflake:nth-of-type(8){left:80%;-webkit-animation-delay:1s,0s;animation-delay:1s,0s}.snowflake:nth-of-type(9){left:90%;-webkit-animation-delay:3s,1.5s;animation-delay:3s,1.5s}
+  
+  </style>
+  <!-- Uploadcare widget: ersetzt DEIN_PUBLIC_KEY mit deinem Key -->
+  <script>
+    UPLOADCARE_PUBLIC_KEY = "1f31917e82c8cfd2736c"; // <-- hier deinen Uploadcare public key einfügen
+    UPLOADCARE_LOCALE = "de"; // deutsch UI (optional)
+  </script>
+  <script src="https://ucarecdn.com/libs/widget/3.x/uploadcare.full.min.js"></script>
+</head>
+<body>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></div>
+      <li><a href="uber.html">Über den Adventskalender</a></li>
+      <li><a href="Musik.html">Musik auf die Ohren</a></li>
+    </ul>
+  </nav>
+  <header>
+    <h1>Weird Christmas Inc. 2025 | Tag 5</h1>
+    <p>Ein schräger Adventskalender von <strong>Matze & Pati!</strong></p>
+  </header>
+
+  <main>
+    <section class="briefing">
+      <h2>Aufgabe des Tages</h2>
+      <p><strong>Das Briefing: Die Geburtsstunde des unnützen Merch</strong></p>
+      <p>Am Montagmorgen stürmt Rudolph mit einer Energie ins Büro, die weder vom Schlaf noch von gesundem Menschenverstand stammen kann. Er erklärt, dass Weird Christmas Inc. dringend Produkte braucht, denn „echte Marken verkaufen Dinge, die niemand braucht, aber man unbedingt haben will“. Sofort beginnt eine wilde Diskussion über potenzielle Merchandise-Ideen, die von selbstwärmenden Schneekugeln über Duftspray „Eau de Rentier“ bis hin zu Anti-Stress-Elfen am Schlüsselanhänger reichen. </p>
+      <p>SDie Begeisterung ist groß, aber die Umsetzbarkeit gering und jeder Vorschlag scheint nur noch abstruser zu werden. Ein Elf schlägt dezent vor, vielleicht erstmal klein anzufangen, aber Rudolph hört schon lange nicht mehr zu und skizziert enthusiastisch Fantasieprodukte in den Schnee vor dem Fenster. Trotz allem spürt man eine seltsame Form von Kreativität, die – chaotisch oder nicht – eine gewisse Firmenidentität schafft.</p>
+    <p><strong>Aufgabe: Skizziere oder gestalte ein seltsames Weihnachtsprodukt, das Weird Christmas Inc. verkaufen könnte.</strong></p>
+    </section>
+
+    <!-- Uploadbereiche: Uploadcare inputs -->
+    <section class="upload-area">
+      <div class="upload-box">
+        <h3>Matze’s Werk hochladen</h3>
+        <!-- role="uploadcare-uploader" erzeugt das Widget -->
+        <input type="hidden" role="uploadcare-uploader" data-public-key="1f31917e82c8cfd2736c"
+               data-images-only="false" data-tabs="file url" data-clearable="true" id="uploader-matze" />
+        <div id="preview-matze"></div>
+        <div class="url" id="url-matze"></div>
+      </div>
+
+      <div class="upload-box">
+        <h3>Pati’s Werk hochladen</h3>
+        <input type="hidden" role="uploadcare-uploader" data-public-key="1f31917e82c8cfd2736c"
+               data-images-only="false" data-tabs="file url" data-clearable="true" id="uploader-pati" />
+        <div id="preview-pati"></div>
+        <div class="url" id="url-pati"></div>
+      </div>
+    </section>
+
+    <a href="index.html" class="button-54">⬅ Zurück zum Kalender</a>
+  </main>
+
+  <footer>© 2025 Weird Christmas Inc.</footer>
+
+     <div class="snowflake">
+  •
+  </div>
+      <div class="snowflake">
+  •
+  </div>
+   <div class="snowflake">
+  •
+  </div>
+      <div class="snowflake">
+  •
+  </div>
+   <div class="snowflake">
+  •
+  </div>
+      <div class="snowflake">
+  •
+  </div>
+   <div class="snowflake">
+  •
+  </div>
+      <div class="snowflake">
+  •
+  </div>
+   <div class="snowflake">
+  •
+  </div>
+      <div class="snowflake">
+  •
+  </div>
+   <div class="snowflake">
+  •
+  </div>
+      <div class="snowflake">
+  •
+  </div>
+   <div class="snowflake">
+  •
+  </div>
+      <div class="snowflake">
+  •
+  </div>
+     <div class="snowflake">
+  •
+  </div>
+      <div class="snowflake">
+  •
+  </div>
+   <div class="snowflake">
+  •
+  </div>
+      <div class="snowflake">
+  •
+  </div>
+   <div class="snowflake">
+  •
+  </div>
+      <div class="snowflake">
+  •
+  </div>
+   <div class="snowflake">
+  •
+  </div>
+      <div class="snowflake">
+  •
+  </div>
+   <div class="snowflake">
+  •
+  </div>
+      <div class="snowflake">
+  •
+  </div>
+   <div class="snowflake">
+  •
+  </div>
+      <div class="snowflake">
+  •
+  </div>
+   <div class="snowflake">
+  •
+  </div>
+      <div class="snowflake">
+  •
+  </div>
+     <div class="snowflake">
+  •
+  </div>
+      <div class="snowflake">
+  •
+  </div>
+   <div class="snowflake">
+  •
+  </div>
+      <div class="snowflake">
+  •
+  </div>
+   <div class="snowflake">
+  •
+  </div>
+      <div class="snowflake">
+  •
+  </div>
+   <div class="snowflake">
+  •
+  </div>
+      <div class="snowflake">
+  •
+  </div>
+   <div class="snowflake">
+  •
+  </div>
+      <div class="snowflake">
+  •
+  </div>
+   <div class="snowflake">
+  •
+  </div>
+      <div class="snowflake">
+  •
+  </div>
+   <div class="snowflake">
+  •
+  </div>
+      <div class="snowflake">
+  •
+  </div>
+ <script>
+  // ---- KONFIGURATION ----
+  const THUMB_SIZE = 300; // Größe der Thumbnails (px)
+
+  // ---- HELFERFUNKTIONEN ----
+  function createMediaElement(url) {
+    const lower = url.toLowerCase();
+
+    // Wenn Uploadcare-Link: Thumbnail erzeugen
+
+
+    if (lower.match(/\.(mp4|webm|ogg)(\\?.*)?$/)) {
+      // Video-Vorschau klein anzeigen
+      const v = document.createElement("video");
+      v.src = displayUrl;
+      v.controls = true;
+      v.autoplay = false;
+      v.style.maxWidth = "200px";
+      v.style.borderRadius = "12px";
+      v.style.border = "2px solid #fbbf24";
+      v.style.boxShadow = "0 2px 6px rgba(0,0,0,0.2)";
+      return v;
+    } else {
+      // Bild-Vorschau klein anzeigen
+      const img = document.createElement("img");
+      img.src = displayUrl;
+      img.alt = "Vorschau";
+      img.style.maxWidth = "200px";
+      img.style.borderRadius = "12px";
+      img.style.border = "2px solid #fbbf24";
+      img.style.boxShadow = "0 2px 6px rgba(0,0,0,0.2)";
+      img.style.margin = "0.5rem";
+      img.style.transition = "transform 0.2s";
+      img.addEventListener("mouseover", () => (img.style.transform = "scale(1.05)"));
+      img.addEventListener("mouseout", () => (img.style.transform = "scale(1)"));
+      return img;
+    }
+  }
+
+  // ---- VORSCHAU-FUNKTION ----
+  function showPreview(role, fileInfo) {
+    const preview = document.getElementById("preview-" + role);
+    const urlEl = document.getElementById("url-" + role);
+    preview.innerHTML = "";
+    urlEl.textContent = "";
+
+    const cdnUrl = fileInfo.cdnUrl || fileInfo.originalUrl || (fileInfo && fileInfo.url);
+    if (!cdnUrl) return;
+
+    const el = createMediaElement(cdnUrl);
+    preview.appendChild(el);
+    urlEl.textContent = cdnUrl;
+
+    // Vorschau auch in Galerie anzeigen
+    addToGallery(cdnUrl);
+  }
+
+  function addToGallery(url) {
+    const g = document.getElementById("gallery");
+    const item = createMediaElement(url);
+    g.prepend(item);
+  }
+
+  // ---- UPLOADCARE INITIALISIERUNG ----
+  const widgetMatze = uploadcare.Widget("#uploader-matze");
+  const widgetPati = uploadcare.Widget("#uploader-pati");
+
+  // Wenn Datei fertig hochgeladen → Vorschau anzeigen
+  widgetMatze.onUploadComplete(fileInfo => showPreview("matze", fileInfo));
+  widgetPati.onUploadComplete(fileInfo => showPreview("pati", fileInfo));
+</script>
+</body>
+</html>
